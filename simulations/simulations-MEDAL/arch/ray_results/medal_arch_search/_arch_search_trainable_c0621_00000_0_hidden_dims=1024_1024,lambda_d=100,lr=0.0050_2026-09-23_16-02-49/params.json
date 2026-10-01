@@ -1,0 +1,36 @@
+{
+  "_arch_search": true,
+  "_emb_path": "/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch/embeddings/arch_search_teacher.npy",
+  "_norm_path": "/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch/embeddings/arch_search_teacher.norm.pkl",
+  "activation": "SELU",
+  "adamw_weight_decay": 1e-05,
+  "batch_size": 256,
+  "bottleneck_activation": null,
+  "dataset_name": "data",
+  "distill_bands": null,
+  "dropout_rate": 0.0,
+  "eta_min": 1e-07,
+  "final_activation": null,
+  "hidden_dims": [
+    1024,
+    1024
+  ],
+  "lambda_d": 100,
+  "latent_dim": 2,
+  "lr": 0.005,
+  "max_epochs": 1000,
+  "normalize_teacher": true,
+  "output_dir": "/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch",
+  "seed": 0,
+  "t_factor": 0.9,
+  "t_patience": 20,
+  "teacher": "umap",
+  "teacher_config": {
+    "min_dist": 0.1,
+    "n_components": 2,
+    "n_neighbors": 15
+  },
+  "use_batchnorm": false,
+  "verbose": false,
+  "warmup": 0
+}

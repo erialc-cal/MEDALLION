@@ -1,0 +1,80 @@
+{
+  "best_config": {
+    "max_epochs": 3000,
+    "batch_size": 256,
+    "warmup": 0,
+    "eta_min": 1e-07,
+    "adamw_weight_decay": 1e-05,
+    "t_factor": 0.9,
+    "t_patience": 20,
+    "bottleneck_activation": null,
+    "final_activation": null,
+    "dropout_rate": 0.0,
+    "hidden_dims": [
+      512,
+      512
+    ],
+    "lr": 0.01,
+    "lambda_d": 5000,
+    "activation": "SELU",
+    "use_batchnorm": false
+  },
+  "best_metrics": {
+    "distill_loss": 6.172958546812879e-06,
+    "recon_loss": 5.25172529220581,
+    "lr": 3.329896365316151e-06,
+    "stability": 0,
+    "timestamp": 1790287364,
+    "checkpoint_dir_name": null,
+    "done": true,
+    "training_iteration": 1000,
+    "trial_id": "c5299_00064",
+    "date": "2026-09-24_18-02-44",
+    "time_this_iter_s": 0.16663694381713867,
+    "time_total_s": 175.03256273269653,
+    "pid": 6463,
+    "hostname": "MacBook-Pro-Claire-8.local",
+    "node_ip": "127.0.0.1",
+    "config": {
+      "max_epochs": 3000,
+      "batch_size": 256,
+      "warmup": 0,
+      "eta_min": 1e-07,
+      "adamw_weight_decay": 1e-05,
+      "t_factor": 0.9,
+      "t_patience": 20,
+      "distill_bands": null,
+      "bottleneck_activation": null,
+      "final_activation": null,
+      "dropout_rate": 0.0,
+      "verbose": false,
+      "hidden_dims": [
+        512,
+        512
+      ],
+      "lr": 0.01,
+      "lambda_d": 5000,
+      "activation": "SELU",
+      "use_batchnorm": false,
+      "_arch_search": true,
+      "output_dir": "/Users/clairehe/Documents/GitHub/MEDAL_FI/encoder_FI/experiments/arch_search",
+      "dataset_name": "data",
+      "teacher": "tsne",
+      "latent_dim": 2,
+      "teacher_config": {
+        "perplexity": 30,
+        "n_components": 2
+      },
+      "seed": 0,
+      "normalize_teacher": true,
+      "_emb_path": "/Users/clairehe/Documents/GitHub/MEDAL_FI/encoder_FI/experiments/arch_search/embeddings/arch_search_teacher.npy",
+      "_norm_path": "/Users/clairehe/Documents/GitHub/MEDAL_FI/encoder_FI/experiments/arch_search/embeddings/arch_search_teacher.norm.pkl"
+    },
+    "time_since_restore": 175.03256273269653,
+    "iterations_since_restore": 1000,
+    "experiment_tag": "64_hidden_dims=512_512,lambda_d=5000,lr=0.0100"
+  },
+  "teacher_emb_path": "/Users/clairehe/Documents/GitHub/MEDAL_FI/encoder_FI/experiments/arch_search/embeddings/arch_search_teacher.npy",
+  "metric": "distill_loss",
+  "mode": "min"
+}

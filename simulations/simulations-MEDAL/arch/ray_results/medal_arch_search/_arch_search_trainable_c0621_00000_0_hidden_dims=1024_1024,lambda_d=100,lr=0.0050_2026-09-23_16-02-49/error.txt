@@ -1,0 +1,15 @@
+Failure # 1 (occurred at 2026-09-23_16-03-21)
+[36mray::ImplicitFunc.train()[39m (pid=94488, ip=127.0.0.1, actor_id=e265981010aa5c35ec4c213701000000, repr=_arch_search_trainable)
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 326, in train
+    result = self.step()
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/site-packages/ray/tune/trainable/function_trainable.py", line 104, in step
+    training_result: Optional[_TrainingResult] = session.get_next()
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/site-packages/ray/train/_internal/session.py", line 288, in get_next
+    result = self._get_result_from_queues(block=True)
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/site-packages/ray/train/_internal/session.py", line 342, in _get_result_from_queues
+    result = self.result_queue.get(block=block, timeout=_RESULT_FETCH_TIMEOUT)
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/Users/clairehe/anaconda3/envs/medal_env/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+ray.exceptions.TaskCancelledError: Task: TaskID(b94dd10e1a9e4bd4e265981010aa5c35ec4c213701000000) was cancelled.

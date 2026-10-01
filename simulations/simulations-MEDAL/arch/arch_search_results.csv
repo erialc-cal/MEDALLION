@@ -1,0 +1,9 @@
+distill_loss,recon_loss,lr,stability,timestamp,checkpoint_dir_name,done,training_iteration,date,time_this_iter_s,time_total_s,pid,hostname,node_ip,time_since_restore,iterations_since_restore,experiment_tag,config/max_epochs,config/batch_size,config/warmup,config/eta_min,config/adamw_weight_decay,config/t_factor,config/t_patience,config/distill_bands,config/bottleneck_activation,config/final_activation,config/dropout_rate,config/verbose,config/hidden_dims,config/lr,config/lambda_d,config/activation,config/use_batchnorm,config/_arch_search,config/output_dir,config/dataset_name,config/teacher,config/latent_dim,config/seed,config/normalize_teacher,config/_emb_path,config/_norm_path,config/teacher_config/n_neighbors,config/teacher_config/min_dist,config/teacher_config/n_components
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+0.00032214091819090146,0.03711992253859838,0.0008338590849833291,0.0,1790193801.0,,False,742.0,2026-09-23_16-03-21,0.040899038314819336,27.087295055389404,94488.0,MacBook-Pro-Claire-8.local,127.0.0.1,27.087295055389404,742.0,"0_hidden_dims=1024_1024,lambda_d=100,lr=0.0050",1000.0,256.0,0.0,1e-07,1e-05,0.9,20.0,,,,0.0,False,"[1024, 1024]",0.005,100.0,SELU,False,True,/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch,data,umap,2.0,0.0,True,/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch/embeddings/arch_search_teacher.npy,/Users/clairehe/Documents/GitHub/MEDAL_FI/simulations/simulations-MEDAL/arch/embeddings/arch_search_teacher.norm.pkl,15.0,0.1,2.0
