@@ -1,0 +1,8 @@
+{
+  "train_distill_mse": 5.551977210416226e-06,
+  "train_recon_mse": 5.482367992401123,
+  "validation_recon_mse": 7.970141887664795,
+  "validation_mean_baseline_mse": 18.84552764892578,
+  "ig_mean_abs_completeness_error": 0.013104701414704323,
+  "ig_max_abs_completeness_error": 0.05866670608520508
+}

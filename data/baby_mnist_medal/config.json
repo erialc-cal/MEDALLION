@@ -1,0 +1,24 @@
+{
+  "max_epochs": 3000,
+  "batch_size": 256,
+  "warmup": 0,
+  "eta_min": 1e-07,
+  "adamw_weight_decay": 1e-05,
+  "t_factor": 0.9,
+  "t_patience": 20,
+  "bottleneck_activation": null,
+  "final_activation": null,
+  "dropout_rate": 0.0,
+  "hidden_dims": [
+    512,
+    512
+  ],
+  "lr": 0.01,
+  "lambda_d": 5000,
+  "activation": "SELU",
+  "use_batchnorm": false,
+  "input_dim": 64,
+  "latent_dim": 2,
+  "seed": 0,
+  "source": "/Users/clairehe/Documents/GitHub/MEDAL_FI/encoder_FI/experiments/arch_search"
+}

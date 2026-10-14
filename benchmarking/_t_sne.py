@@ -27,12 +27,64 @@ from sklearn.decomposition import PCA
 from sklearn.manifold import _barnes_hut_tsne, _utils  # type: ignore[attr-defined]
 from sklearn.metrics.pairwise import _VALID_METRICS, pairwise_distances
 from sklearn.neighbors import NearestNeighbors
-from sklearn.utils import _align_api_if_sparse, check_random_state
+from sklearn.utils import check_random_state
+try:
+    from sklearn.utils import _align_api_if_sparse
+except ImportError:  # sklearn 1.7 uses sparse matrices for the Barnes-Hut path.
+    from scipy.sparse import csr_matrix
+
+    def _align_api_if_sparse(X):
+        return csr_matrix(X) if issparse(X) else X
 from sklearn.utils._openmp_helpers import _openmp_effective_n_threads
 from sklearn.utils._param_validation import Interval, StrOptions, validate_params
 from sklearn.utils.validation import _num_samples, check_non_negative, validate_data
 
 MACHINE_EPSILON = np.finfo(np.double).eps
+
+
+def _binary_search_perplexity_with_scales(distances, desired_perplexity, verbose=0):
+    """Exact t-SNE probabilities and beta = 1 / (2 * sigma**2).
+
+    Mirrors sklearn's perplexity search without modifying its compiled helper.
+    Each returned beta is the precision used to compute its probability row.
+    """
+    distances = np.asarray(distances, dtype=np.float32)
+    if distances.ndim != 2 or distances.shape[0] != distances.shape[1]:
+        raise ValueError("Exact perplexity search requires a square distance matrix")
+    n = len(distances)
+    if not 0 < desired_perplexity < n:
+        raise ValueError("perplexity must be positive and less than n_samples")
+    if not np.isfinite(distances).all() or np.any(distances < 0):
+        raise ValueError("Distances must be finite and nonnegative")
+    probabilities = np.zeros((n, n), dtype=np.float64)
+    scales = np.empty(n, dtype=np.float64)
+    target = np.log(float(np.float32(desired_perplexity)))
+    for i in range(n):
+        row = distances[i].astype(np.float64)
+        beta, lower, upper = 1.0, -np.inf, np.inf
+        for step in range(100):
+            weights = np.exp(-row * beta)
+            weights[i] = 0.0
+            total = weights.sum()
+            if total == 0.0:
+                total = float(np.float32(1e-8))
+            probs = weights / total
+            entropy = np.log(total) + beta * np.dot(row, probs)
+            diff = entropy - target
+            # Store the evaluated beta, including when the iteration cap is hit.
+            probabilities[i] = probs
+            scales[i] = beta
+            if abs(diff) <= float(np.float32(1e-5)):
+                break
+            if diff > 0:
+                lower = beta
+                beta = beta * 2 if np.isinf(upper) else (beta + upper) / 2
+            else:
+                upper = beta
+                beta = beta / 2 if np.isinf(lower) else (beta + lower) / 2
+        if verbose and ((i + 1) % 1000 == 0 or i + 1 == n):
+            print(f"[t-SNE] Computed conditional probabilities for sample {i+1} / {n}")
+    return probabilities, scales
 
 
 def _joint_probabilities(distances, desired_perplexity, verbose):
@@ -59,7 +111,7 @@ def _joint_probabilities(distances, desired_perplexity, verbose):
     # Compute conditional probabilities such that they approximately match
     # the desired perplexity
     distances = distances.astype(np.float32, copy=False)
-    conditional_P, scales = _utils._binary_search_perplexity(
+    conditional_P, scales = _binary_search_perplexity_with_scales(
         distances, desired_perplexity, verbose
     )
     P = conditional_P + conditional_P.T

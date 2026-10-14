@@ -66,8 +66,8 @@ def calc_cross2order_single(tsne, x_train, feat, idx, k):
         d_ij=d[j]
         v_ij_=0
 
-        p_ji=math.exp(-x_sq_distances[j]/scales[idx])/s_pi   #eq20
-        partial_p_ji=-(x_k_distances[idx,j]*2*scales[idx] + partial_s_pi/s_pi)*p_ji  #eq22
+        p_ji=math.exp(-x_sq_distances[j]/scales[idx])/(s_pi +1e-12)  #eq20
+        partial_p_ji=-(x_k_distances[idx,j]*2*scales[idx] + partial_s_pi/(s_pi+1e-12))*p_ji  #eq22
 
         s_pj=0    #eq25
         for l in range(n):
@@ -75,13 +75,13 @@ def calc_cross2order_single(tsne, x_train, feat, idx, k):
                 s_pj+=math.exp(-x_sq_distances_tot[j][l]/scales[j]) 
             
         temp=math.exp(-x_sq_distances[j]/scales[j])
-        p_ij=temp/s_pj  #eq 24
+        p_ij=temp/(s_pj+1e-12)  #eq 24
         partial_s_pj=x_k_distances[j,idx]*2*scales[j]*temp    #eq27
-        partial_p_ij=(x_k_distances[j,idx]*2*scales[j] + partial_s_pj/s_pj)*p_ij #eq26
+        partial_p_ij=(x_k_distances[j,idx]*2*scales[j] + partial_s_pj/(s_pj+1e-12))*p_ij #eq26
 
         v_ij_=partial_p_ij + partial_p_ji
 
-        cross_2order+=v_ij_/e[j]*d[j]
+        cross_2order+=v_ij_/(e[j]*d[j]+1e-12)
         
     cross_2order*=2/n
     return cross_2order

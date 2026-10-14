@@ -78,7 +78,7 @@ class LXDR:
         if str(type(self.model)) == "<class '__main__.Autoencoder'>":
             return self.model.predict(np.array(input_data))
         else:
-            return self.model.transform(input_data)
+            return self.model.fit_transform(input_data)
 
     def _set_knn(self):
         self.knn = NearestNeighbors()

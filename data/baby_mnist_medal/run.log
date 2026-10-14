@@ -1,0 +1,14 @@
+Training on (1149, 64), validation (288, 64); original pixel scale retained.
+Report 100/1000: {'distill_loss': 0.5030127927660942, 'recon_loss': 20.0376916885376, 'lr': 0.004782969000000002, 'stability': 0}
+Report 200/1000: {'distill_loss': 0.022751525044441223, 'recon_loss': 10.304366111755371, 'lr': 0.0013508517176729932, 'stability': 0}
+Report 300/1000: {'distill_loss': 0.0013029569294303656, 'recon_loss': 6.652976322174072, 'lr': 0.0007178979876918532, 'stability': 0}
+Report 400/1000: {'distill_loss': 0.0004435392329469323, 'recon_loss': 6.045470905303955, 'lr': 0.00034336838202925164, 'stability': 0}
+Report 500/1000: {'distill_loss': 9.083847544388846e-05, 'recon_loss': 5.680622386932373, 'lr': 0.00014780882941434616, 'stability': 0}
+Report 600/1000: {'distill_loss': 2.642360886966344e-05, 'recon_loss': 5.592404842376709, 'lr': 6.362685441135955e-05, 'stability': 0}
+Report 700/1000: {'distill_loss': 1.72696996742161e-05, 'recon_loss': 5.532633495330811, 'lr': 3.0432527221704597e-05, 'stability': 0}
+Report 800/1000: {'distill_loss': 1.1022801118087955e-05, 'recon_loss': 5.481207084655762, 'lr': 1.4555783429306922e-05, 'stability': 0}
+Report 900/1000: {'distill_loss': 6.131754435045877e-06, 'recon_loss': 5.514694881439209, 'lr': 6.265787482177985e-06, 'stability': 0}
+Report 1000/1000: {'distill_loss': 5.604692069027805e-06, 'recon_loss': 5.47086353302002, 'lr': 2.9969067287845362e-06, 'stability': 0}
+Saved model to /Users/clairehe/Documents/GitHub/iicd_MEDAL_feat/outputs/baby_mnist_medal/baby_mnist_ckpts/final.pt
+Metrics: {'train_distill_mse': 5.551977210416226e-06, 'train_recon_mse': 5.482367992401123, 'validation_recon_mse': 7.970141887664795, 'validation_mean_baseline_mse': 18.84552764892578}
+FINISHED /Users/clairehe/Documents/GitHub/iicd_MEDAL_feat/outputs/baby_mnist_medal
