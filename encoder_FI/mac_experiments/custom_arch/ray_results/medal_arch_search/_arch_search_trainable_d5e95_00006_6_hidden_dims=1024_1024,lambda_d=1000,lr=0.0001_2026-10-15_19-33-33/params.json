@@ -1,0 +1,37 @@
+{
+  "_arch_search": true,
+  "_emb_path": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments/custom_arch/embeddings/arch_search_teacher.npy",
+  "_norm_path": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments/custom_arch/embeddings/arch_search_teacher.norm.pkl",
+  "activation": "SELU",
+  "adamw_weight_decay": 1e-05,
+  "batch_size": 256,
+  "bottleneck_activation": null,
+  "dataset_name": "data",
+  "distill_bands": null,
+  "dropout_rate": 0.0,
+  "eta_min": 1e-07,
+  "final_activation": null,
+  "hidden_dims": [
+    1024,
+    1024
+  ],
+  "lambda_d": 1000,
+  "latent_dim": 2,
+  "lr": 5e-05,
+  "max_epochs": 3000,
+  "normalize_teacher": true,
+  "output_dir": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments/custom_arch",
+  "seed": 0,
+  "t_factor": 0.9,
+  "t_patience": 20,
+  "teacher": "__custom__92abc52a4dbeef2f6aa6",
+  "teacher_config": {
+    "n_components": 2,
+    "n_neighbors": 20,
+    "n_pcs": 100,
+    "random_state": 0
+  },
+  "use_batchnorm": false,
+  "verbose": false,
+  "warmup": 0
+}

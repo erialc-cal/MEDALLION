@@ -1,0 +1,129 @@
+{
+  "metadata_version": 1,
+  "data_digest": "11b87849571bec01f6dd142b5332a41090b86213e2b000331d8e7de8fc7e9045",
+  "settings": {
+    "kind": "teacher_sweep",
+    "teacher": {
+      "name": "PCA_UMAP",
+      "version": "1",
+      "key": "__custom__92abc52a4dbeef2f6aa6",
+      "default_params": {
+        "n_neighbors": 20,
+        "n_pcs": 100,
+        "random_state": 0
+      },
+      "sweep": {
+        "param_name": "n_neighbors",
+        "values": [
+          20,
+          29,
+          41,
+          58,
+          84,
+          120,
+          171,
+          245,
+          350,
+          500
+        ]
+      }
+    },
+    "param_grid": [
+      {
+        "n_neighbors": 20,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 29,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 41,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 58,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 84,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 120,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 171,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 245,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 350,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      {
+        "n_neighbors": 500,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      }
+    ],
+    "arch_config": {
+      "max_epochs": 3000,
+      "batch_size": 256,
+      "warmup": 0,
+      "eta_min": 1e-07,
+      "adamw_weight_decay": 1e-05,
+      "t_factor": 0.9,
+      "t_patience": 20,
+      "bottleneck_activation": null,
+      "final_activation": null,
+      "dropout_rate": 0.0,
+      "hidden_dims": [
+        1024,
+        1024
+      ],
+      "lr": 0.001,
+      "lambda_d": 10000,
+      "activation": "SELU",
+      "use_batchnorm": false
+    },
+    "latent_dim": 2,
+    "val_size": 0.2,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "normalize_teacher": true,
+    "distill_bands": [
+      [
+        1e-12,
+        9e-06
+      ]
+    ],
+    "save_checkpoints": true
+  }
+}

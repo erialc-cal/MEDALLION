@@ -1,0 +1,40 @@
+{
+  "activation": "SELU",
+  "adamw_weight_decay": 1e-05,
+  "batch_size": 256,
+  "bottleneck_activation": null,
+  "dataset_name": "data",
+  "distill_bands": [
+    [
+      1e-12,
+      9e-06
+    ]
+  ],
+  "dropout_rate": 0.0,
+  "eta_min": 1e-07,
+  "final_activation": null,
+  "hidden_dims": [
+    1024,
+    1024
+  ],
+  "lambda_d": 10000,
+  "latent_dim": 2,
+  "lr": 0.001,
+  "max_epochs": 3000,
+  "normalize_teacher": true,
+  "output_dir": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments/custom_sweep",
+  "save_checkpoints": true,
+  "seed": 2,
+  "t_factor": 0.9,
+  "t_patience": 20,
+  "teacher": "__custom__92abc52a4dbeef2f6aa6",
+  "teacher_config": {
+    "n_components": 2,
+    "n_neighbors": 58,
+    "n_pcs": 100,
+    "random_state": 0
+  },
+  "use_batchnorm": false,
+  "verbose": false,
+  "warmup": 0
+}

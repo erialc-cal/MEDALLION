@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 940" width="1200" height="940">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2C94C"/>
+      <stop offset="1" stop-color="#D49B1F"/>
+    </linearGradient>
+    <linearGradient id="purplePlane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#6B35B7" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="tealPlane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#008C8C" stop-opacity="0.12"/>
+    </linearGradient>
+    <style>
+      .navy { fill: #08244A; }
+      .navyStroke { stroke: #08244A; }
+      .goldStroke { stroke: #D8A93A; }
+      .purpleStroke { stroke: #5D2CA8; }
+      .tealStroke { stroke: #008C8C; }
+      .purpleFill { fill: #5D2CA8; }
+      .tealFill { fill: #008C8C; }
+      .dash { stroke-dasharray: 12 13; stroke-linecap: round; }
+      .wordmark { font-family: Avenir Next, Montserrat, Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 34px; fill:#08244A; }
+      .subtitle { font-family: Avenir Next, Montserrat, Helvetica, Arial, sans-serif; font-weight: 650; letter-spacing: 8px; fill:#08244A; }
+    </style>
+  </defs>
+
+  <!-- transparent background by design -->
+
+  <!-- ribbon -->
+  <polygon class="navy" points="420,36 540,278 455,278 335,36"/>
+  <polygon class="navy" points="780,36 660,278 745,278 865,36"/>
+
+  <!-- medal ring -->
+  <circle cx="600" cy="505" r="405" fill="none" class="goldStroke" stroke-width="20"/>
+  <circle cx="600" cy="505" r="390" fill="none" class="navyStroke" stroke-width="10"/>
+
+  <!-- upper and lower planes -->
+  <polygon points="300,305 600,210 900,305 600,395" fill="url(#purplePlane)" class="purpleStroke" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="300,705 600,805 900,705 600,615" fill="url(#tealPlane)" class="tealStroke" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- teacher node -->
+  <circle cx="600" cy="505" r="44" fill="url(#gold)"/>
+  <circle cx="600" cy="505" r="50" fill="none" stroke="#BDBDBD" stroke-width="4"/>
+
+  <!-- distillation rays from high-D to teacher -->
+  <line x1="490" y1="363" x2="600" y2="505" class="navyStroke dash" stroke-width="4" opacity="0.9"/>
+  <line x1="555" y1="390" x2="600" y2="505" class="navyStroke dash" stroke-width="4" opacity="0.9"/>
+  <line x1="600" y1="395" x2="600" y2="505" class="navyStroke dash" stroke-width="4" opacity="0.9"/>
+  <line x1="645" y1="390" x2="600" y2="505" class="navyStroke dash" stroke-width="4" opacity="0.9"/>
+  <line x1="710" y1="363" x2="600" y2="505" class="navyStroke dash" stroke-width="4" opacity="0.9"/>
+
+  <!-- reconstruction rays from teacher to low-D manifold -->
+  <line x1="600" y1="505" x2="490" y2="663" class="tealStroke dash" stroke-width="4" opacity="0.95"/>
+  <line x1="600" y1="505" x2="555" y2="625" class="tealStroke dash" stroke-width="4" opacity="0.95"/>
+  <line x1="600" y1="505" x2="600" y2="615" class="tealStroke dash" stroke-width="4" opacity="0.95"/>
+  <line x1="600" y1="505" x2="645" y2="625" class="tealStroke dash" stroke-width="4" opacity="0.95"/>
+  <line x1="600" y1="505" x2="710" y2="663" class="tealStroke dash" stroke-width="4" opacity="0.95"/>
+
+  <!-- high-D points: unstructured on top plane -->
+  <g class="purpleFill">
+    <circle cx="420" cy="306" r="13"/><circle cx="455" cy="332" r="9"/><circle cx="490" cy="280" r="15"/>
+    <circle cx="525" cy="330" r="11"/><circle cx="562" cy="294" r="9"/><circle cx="598" cy="318" r="14"/>
+    <circle cx="635" cy="276" r="10"/><circle cx="672" cy="325" r="13"/><circle cx="708" cy="292" r="9"/>
+    <circle cx="742" cy="330" r="15"/><circle cx="390" cy="345" r="8"/><circle cx="476" cy="367" r="12"/>
+    <circle cx="548" cy="361" r="7"/><circle cx="622" cy="355" r="10"/><circle cx="690" cy="363" r="8"/>
+    <circle cx="780" cy="355" r="11"/>
+  </g>
+
+  <!-- low-D points: structured on bottom plane -->
+  <g class="tealFill">
+    <circle cx="450" cy="700" r="16"/><circle cx="485" cy="670" r="10"/><circle cx="525" cy="715" r="12"/>
+    <circle cx="560" cy="685" r="8"/><circle cx="600" cy="733" r="15"/><circle cx="640" cy="685" r="9"/>
+    <circle cx="675" cy="715" r="13"/><circle cx="715" cy="670" r="10"/><circle cx="750" cy="700" r="16"/>
+    <circle cx="520" cy="755" r="8"/><circle cx="600" cy="770" r="10"/><circle cx="680" cy="755" r="8"/>
+  </g>
+
+</svg>

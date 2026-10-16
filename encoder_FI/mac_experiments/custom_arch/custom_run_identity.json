@@ -1,0 +1,44 @@
+{
+  "metadata_version": 1,
+  "data_digest": "11b87849571bec01f6dd142b5332a41090b86213e2b000331d8e7de8fc7e9045",
+  "settings": {
+    "kind": "architecture_search",
+    "teacher": {
+      "name": "PCA_UMAP",
+      "version": "1",
+      "key": "__custom__92abc52a4dbeef2f6aa6",
+      "default_params": {
+        "n_neighbors": 20,
+        "n_pcs": 100,
+        "random_state": 0
+      },
+      "sweep": {
+        "param_name": "n_neighbors",
+        "values": [
+          20,
+          29,
+          41,
+          58,
+          84,
+          120,
+          171,
+          245,
+          350,
+          500
+        ]
+      }
+    },
+    "teacher_params": {
+      "n_neighbors": 20,
+      "n_pcs": 100,
+      "random_state": 0,
+      "n_components": 2
+    },
+    "latent_dim": 2,
+    "seed": 0,
+    "test_size": 0.2,
+    "max_epochs": 3000,
+    "search_mode": "random",
+    "num_samples": 20
+  }
+}

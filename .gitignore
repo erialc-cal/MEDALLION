@@ -1,2 +1,12 @@
 *.gz
 *.h5ad
+
+# Large experiment data
+encoder_FI/mac_experiments/custom_arch/X_val.npy
+encoder_FI/mac_experiments/custom_arch/X_train.npy
+encoder_FI/mac_experiments/ig_attribution_data.npz
+encoder_FI/mac_experiments/ig_attribution_data_train.npz
+
+# NumPy data files
+*.npy
+*.npz

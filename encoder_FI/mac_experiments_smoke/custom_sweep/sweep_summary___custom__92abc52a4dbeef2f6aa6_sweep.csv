@@ -1,0 +1,3 @@
+n_neighbors,seed,final_distill_loss,final_recon_loss,n_epochs,early_stopped
+10,0,0.1094987727701664,0.33470986783504486,5,False
+20,0,0.10274612158536911,0.3433324098587036,5,False

@@ -1,0 +1,27 @@
+name: medal
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - tqdm
+  - ipykernel
+  - umap-learn
+  - opentsne
+  - pyarrow
+
+  # PyTorch — add pytorch-cuda=<version> here for GPU support
+  - pytorch
+
+  # pip-only packages
+  - pip:
+      - ray[tune]
+      - phate

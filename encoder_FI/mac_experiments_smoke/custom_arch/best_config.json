@@ -1,0 +1,80 @@
+{
+  "best_config": {
+    "max_epochs": 5,
+    "batch_size": 256,
+    "warmup": 0,
+    "eta_min": 1e-07,
+    "adamw_weight_decay": 1e-05,
+    "t_factor": 0.9,
+    "t_patience": 20,
+    "bottleneck_activation": null,
+    "final_activation": null,
+    "dropout_rate": 0.0,
+    "hidden_dims": [
+      32
+    ],
+    "lr": 0.001,
+    "lambda_d": 10,
+    "activation": "SELU",
+    "use_batchnorm": false
+  },
+  "best_metrics": {
+    "distill_loss": 0.0576193742454052,
+    "recon_loss": 0.4101865664124489,
+    "lr": 0.001,
+    "stability": 0,
+    "timestamp": 1792098426,
+    "checkpoint_dir_name": null,
+    "done": true,
+    "training_iteration": 5,
+    "trial_id": "3d2b5_00000",
+    "date": "2026-10-15_17-07-06",
+    "time_this_iter_s": 0.11594080924987793,
+    "time_total_s": 38.32671403884888,
+    "pid": 4051055,
+    "hostname": "g193",
+    "node_ip": "10.197.102.203",
+    "config": {
+      "max_epochs": 5,
+      "batch_size": 256,
+      "warmup": 0,
+      "eta_min": 1e-07,
+      "adamw_weight_decay": 1e-05,
+      "t_factor": 0.9,
+      "t_patience": 20,
+      "distill_bands": null,
+      "bottleneck_activation": null,
+      "final_activation": null,
+      "dropout_rate": 0.0,
+      "verbose": false,
+      "hidden_dims": [
+        32
+      ],
+      "lr": 0.001,
+      "lambda_d": 10,
+      "activation": "SELU",
+      "use_batchnorm": false,
+      "_arch_search": true,
+      "output_dir": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments_smoke/custom_arch",
+      "dataset_name": "data",
+      "teacher": "__custom__92abc52a4dbeef2f6aa6",
+      "latent_dim": 2,
+      "teacher_config": {
+        "n_neighbors": 10,
+        "n_pcs": 20,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "seed": 0,
+      "normalize_teacher": true,
+      "_emb_path": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments_smoke/custom_arch/embeddings/arch_search_teacher.npy",
+      "_norm_path": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments_smoke/custom_arch/embeddings/arch_search_teacher.norm.pkl"
+    },
+    "time_since_restore": 38.32671403884888,
+    "iterations_since_restore": 5,
+    "experiment_tag": "0_hidden_dims=32"
+  },
+  "teacher_emb_path": "/burg-archive/stats/users/cmh2277/MEDALLION/encoder_FI/mac_experiments_smoke/custom_arch/embeddings/arch_search_teacher.npy",
+  "metric": "distill_loss",
+  "mode": "min"
+}

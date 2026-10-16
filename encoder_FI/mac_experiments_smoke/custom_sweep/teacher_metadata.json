@@ -1,0 +1,17 @@
+{
+  "name": "PCA_UMAP",
+  "version": "1",
+  "key": "__custom__92abc52a4dbeef2f6aa6",
+  "default_params": {
+    "n_neighbors": 10,
+    "n_pcs": 20,
+    "random_state": 0
+  },
+  "sweep": {
+    "param_name": "n_neighbors",
+    "values": [
+      10,
+      20
+    ]
+  }
+}

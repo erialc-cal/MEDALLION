@@ -1,0 +1,241 @@
+{
+  "teacher": "__custom__92abc52a4dbeef2f6aa6",
+  "param_name": "n_neighbors",
+  "param_values": [
+    20,
+    29,
+    41,
+    58,
+    84,
+    120,
+    171,
+    245,
+    350,
+    500
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_components": 2,
+  "arch_config": {
+    "max_epochs": 3000,
+    "batch_size": 256,
+    "warmup": 0,
+    "eta_min": 1e-07,
+    "adamw_weight_decay": 1e-05,
+    "t_factor": 0.9,
+    "t_patience": 20,
+    "bottleneck_activation": null,
+    "final_activation": null,
+    "dropout_rate": 0.0,
+    "hidden_dims": [
+      1024,
+      1024
+    ],
+    "lr": 0.001,
+    "lambda_d": 10000,
+    "activation": "SELU",
+    "use_batchnorm": false
+  },
+  "metadata_version": 2,
+  "configurations": [
+    {
+      "config_id": "9ea30b01fae90b33263e",
+      "param_value": 20,
+      "teacher_params": {
+        "n_neighbors": 20,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_9ea30b01fae90b33263e_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_9ea30b01fae90b33263e_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_9ea30b01fae90b33263e_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_9ea30b01fae90b33263e_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_9ea30b01fae90b33263e_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "7b44484687550ac18b1f",
+      "param_value": 29,
+      "teacher_params": {
+        "n_neighbors": 29,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_7b44484687550ac18b1f_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_7b44484687550ac18b1f_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_7b44484687550ac18b1f_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_7b44484687550ac18b1f_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_7b44484687550ac18b1f_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "2c26f4dd75ea839d22b2",
+      "param_value": 41,
+      "teacher_params": {
+        "n_neighbors": 41,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_2c26f4dd75ea839d22b2_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_2c26f4dd75ea839d22b2_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_2c26f4dd75ea839d22b2_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_2c26f4dd75ea839d22b2_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_2c26f4dd75ea839d22b2_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "60b3b0afd560fa4c609e",
+      "param_value": 58,
+      "teacher_params": {
+        "n_neighbors": 58,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_60b3b0afd560fa4c609e_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_60b3b0afd560fa4c609e_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_60b3b0afd560fa4c609e_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_60b3b0afd560fa4c609e_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_60b3b0afd560fa4c609e_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "33ed9340ec48ba9b1e42",
+      "param_value": 84,
+      "teacher_params": {
+        "n_neighbors": 84,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_33ed9340ec48ba9b1e42_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_33ed9340ec48ba9b1e42_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_33ed9340ec48ba9b1e42_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_33ed9340ec48ba9b1e42_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_33ed9340ec48ba9b1e42_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "30a1b53e100de0999fe2",
+      "param_value": 120,
+      "teacher_params": {
+        "n_neighbors": 120,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_30a1b53e100de0999fe2_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_30a1b53e100de0999fe2_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_30a1b53e100de0999fe2_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_30a1b53e100de0999fe2_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_30a1b53e100de0999fe2_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "5c1adfb5c835cdc5f71c",
+      "param_value": 171,
+      "teacher_params": {
+        "n_neighbors": 171,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_5c1adfb5c835cdc5f71c_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_5c1adfb5c835cdc5f71c_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_5c1adfb5c835cdc5f71c_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_5c1adfb5c835cdc5f71c_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_5c1adfb5c835cdc5f71c_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "c2e875b60f9ee953ba3e",
+      "param_value": 245,
+      "teacher_params": {
+        "n_neighbors": 245,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_c2e875b60f9ee953ba3e_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_c2e875b60f9ee953ba3e_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_c2e875b60f9ee953ba3e_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_c2e875b60f9ee953ba3e_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_c2e875b60f9ee953ba3e_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "65033c9e26890ef04ba5",
+      "param_value": 350,
+      "teacher_params": {
+        "n_neighbors": 350,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_65033c9e26890ef04ba5_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_65033c9e26890ef04ba5_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_65033c9e26890ef04ba5_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_65033c9e26890ef04ba5_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_65033c9e26890ef04ba5_seed2_ckpts/final.pt"
+      }
+    },
+    {
+      "config_id": "a13a8f4462aa1374ce5a",
+      "param_value": 500,
+      "teacher_params": {
+        "n_neighbors": 500,
+        "n_pcs": 100,
+        "random_state": 0,
+        "n_components": 2
+      },
+      "embedding_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_a13a8f4462aa1374ce5a_train.npy",
+      "normalizer_path": "embeddings/data___custom__92abc52a4dbeef2f6aa6_a13a8f4462aa1374ce5a_train.norm.pkl",
+      "checkpoint_paths": {
+        "0": "medal___custom__92abc52a4dbeef2f6aa6_a13a8f4462aa1374ce5a_seed0_ckpts/final.pt",
+        "1": "medal___custom__92abc52a4dbeef2f6aa6_a13a8f4462aa1374ce5a_seed1_ckpts/final.pt",
+        "2": "medal___custom__92abc52a4dbeef2f6aa6_a13a8f4462aa1374ce5a_seed2_ckpts/final.pt"
+      }
+    }
+  ],
+  "teacher_metadata": {
+    "name": "PCA_UMAP",
+    "version": "1",
+    "key": "__custom__92abc52a4dbeef2f6aa6",
+    "default_params": {
+      "n_neighbors": 20,
+      "n_pcs": 100,
+      "random_state": 0
+    },
+    "sweep": {
+      "param_name": "n_neighbors",
+      "values": [
+        20,
+        29,
+        41,
+        58,
+        84,
+        120,
+        171,
+        245,
+        350,
+        500
+      ]
+    }
+  },
+  "normalize_teacher": true
+}
